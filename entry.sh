@@ -1,8 +1,8 @@
-#!/bin/bash
+#! /bin/bash
 # 在容器关闭前，优雅的关闭服务并下线服务
- function stop_server() {
+function stop_server() {
 	echo "Docker Stop"
-    ./zeppelin/bin/zeppelin-daemon.sh stop
+	./zeppelin/bin/zeppelin-daemon.sh stop
 	./iotdb/sbin/stop-server.sh
 }
 
